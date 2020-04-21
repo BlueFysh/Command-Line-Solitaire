@@ -47,7 +47,7 @@ def move_card(start, target, stack_type, n):
     if len(target) == 0 and start[-n].value != empty_num:
         print('Invalid move: can\'t move that card onto an empty stack')
     elif len(target) != 0 and (not start[-n].is_valid_move(target[-1], stack_type)):
-        print(f'Invalid move: {start[-1].name} -> {target[-1].name}')
+        print(f'Invalid move: {start[-n].name} -> {target[-1].name}')
     elif not start[-n].visible:
         print('Invalid move: can\'t move unrelvealed card')
     else:
