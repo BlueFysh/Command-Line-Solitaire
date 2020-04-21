@@ -150,7 +150,7 @@ for s in suits:
 
 # Make a randomization seed and randomize the deck based on the seed
 while True:
-    seed_in = input('Enter seed number or leave blank for a random seed')
+    seed_in = input('Enter seed number or leave blank for a random seed: ')
     if seed_in:
         try:
             seed = int(seed_in)
@@ -161,7 +161,7 @@ while True:
         seed = random.random()
     break
 
-print(f'Seed: {seed} (currently for internal testing purposes)')
+print(f'Seed: {seed}')
 random.Random(seed).shuffle(deck)
 
 # Deal cards from deck to each stack
